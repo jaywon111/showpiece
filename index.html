@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="description" content="Deep Field: a scroll-driven descent from the edge of the observable universe to a single human cell." />
+  <meta name="theme-color" content="#03040a" />
+  <title>Deep Field</title>
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+<body>
+  <a class="skip" href="#content">Skip to text</a>
+
+  <div id="preloader" role="status" aria-live="polite">
+    <p class="pl-label">Deep Field</p>
+    <p class="pl-pct display" id="pl-pct">0<span>%</span></p>
+    <div class="pl-track"><div class="pl-bar" id="pl-bar"></div></div>
+    <p class="pl-note" id="pl-note">Calibrating the instruments</p>
+  </div>
+
+  <canvas id="stage" aria-hidden="true"></canvas>
+  <div id="drag-layer" aria-hidden="true"></div>
+  <div class="progress" id="progress" aria-hidden="true"></div>
+  <p class="inspect-hint" id="inspect-hint" role="status">tap a glowing star to explore</p>
+  <aside class="inspect-card" id="inspect-card" aria-live="polite" aria-hidden="true">
+    <button class="inspect-close" id="inspect-close" type="button" aria-label="Close object details">×</button>
+    <p class="inspect-kicker">Deep field index</p>
+    <h2 class="inspect-title" id="inspect-title"></h2>
+    <p class="inspect-copy" id="inspect-copy"></p>
+  </aside>
+
+  <nav class="topbar">
+    <span class="brand">Deep Field</span>
+    <button id="sound" class="sound" type="button" aria-pressed="false">Sound off</button>
+  </nav>
+
+  <main id="content" class="content">
+    <section class="hero" aria-labelledby="title">
+      <h1 id="title" class="display">Deep<br /><em>Field</em></h1>
+      <p class="lede reveal scrim">A descent from the edge of the observable universe to a single human cell. Scroll to travel. Drag to look around.</p>
+      <p class="cue">Scroll &darr;</p>
+    </section>
+
+    <section class="chapter left" aria-labelledby="c1">
+      <div class="box reveal scrim">
+        <p class="idx">01 / Galaxies</p>
+        <h2 id="c1" class="display">Two trillion <em>islands</em> of light.</h2>
+        <p>Astronomers estimate roughly two trillion galaxies in the observable universe. Each one is a turning disk of hundreds of billions of stars, most of them too faint to see from here.</p>
+      </div>
+    </section>
+
+    <section class="chapter right" aria-labelledby="c2">
+      <div class="box reveal scrim">
+        <p class="idx">02 / Nurseries</p>
+        <h2 id="c2" class="display">Stars are <em>born</em> in the cold.</h2>
+        <p>Stars form inside vast clouds of gas and dust. Gravity pulls each cloud inward until the core is hot enough to ignite fusion, and a new sun switches on.</p>
+      </div>
+    </section>
+
+    <section class="chapter left" aria-labelledby="c3">
+      <div class="box reveal scrim">
+        <p class="idx">03 / Worlds</p>
+        <h2 id="c3" class="display">The leftovers <em>become</em> worlds.</h2>
+        <p>Planets condense from the disk of material left around a young star. Our own system has eight of them, and most of the rest of the galaxy's worlds are still waiting to be counted.</p>
+      </div>
+    </section>
+
+    <section class="chapter right" aria-labelledby="c4">
+      <div class="box reveal scrim">
+        <p class="idx">04 / Cells</p>
+        <h2 id="c4" class="display">Thirty-seven trillion <em>small</em> factories.</h2>
+        <p>A typical adult human body holds an estimated 37 trillion cells. Each is a membrane-bound workshop, and at its center a nucleus holds the instructions it runs on.</p>
+      </div>
+    </section>
+
+    <section class="chapter finale left" aria-labelledby="c5">
+      <div class="box reveal scrim">
+        <p class="idx">05 / Same material</p>
+        <h2 id="c5" class="display">The same <em>stuff</em> all the way down.</h2>
+        <p>Galaxies, clouds, planets and cells are built from the same handful of elements. Most of the carbon and oxygen in your body was forged inside a star that lived and died long before you.</p>
+      </div>
+    </section>
+
+    <footer class="foot">
+      <p>Deep Field. Built with three.js and Vite. No tracking, no accounts, no backend.</p>
+    </footer>
+  </main>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
